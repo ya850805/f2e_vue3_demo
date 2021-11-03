@@ -1,5 +1,5 @@
 <template>
-  <div id="parent">
+  <div id="parent" :style="{fontSize: fontSize + 'em'}">
     <div id="menu">
       <div class="i_logo"></div>
       <div>
@@ -12,10 +12,29 @@
 
     </div>
     <div id="content">
+      <b>font-size:</b>
+      <select v-model="fontSize">
+        <option value="1">小</option>
+        <option value="2">中</option>
+        <option value="3">大</option>
+      </select>
       <router-view/>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+
+import {Vue} from "vue-class-component";
+
+export default class Home extends Vue {
+  data() {
+    return {
+      fontSize: 1
+    }
+  }
+}
+</script>
 
 <style>
 #app {
@@ -61,7 +80,7 @@ div#menu > div {
   width: 100px;
   height: 100px;
   background-size: 100px;
-  background-image: url(/img/logo.82b9c7a5.png);
+  /*background-image: url(/img/logo.82b9c7a5.png);*/
   background-repeat: no-repeat;
 }
 </style>
