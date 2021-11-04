@@ -2,6 +2,15 @@
   <div class="home">
     <h1>This is an home page</h1>
     <Search></Search>
+
+    <div>
+      <router-link to="/home/routes">Routes</router-link>
+    </div>
+
+    <div>
+      <router-link to="/home/bus/1">Bus</router-link>
+    </div>
+    <router-view></router-view>
   </div>
 </template>
 

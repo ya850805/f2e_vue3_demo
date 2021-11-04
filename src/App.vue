@@ -3,7 +3,7 @@
     <div id="menu">
       <div class="i_logo"></div>
       <div>
-        <router-link to="/">Home</router-link>
+        <router-link to="/home">Home</router-link>
       </div>
 
       <div>

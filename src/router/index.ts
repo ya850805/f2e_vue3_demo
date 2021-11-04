@@ -3,9 +3,21 @@ import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: '/home/routes',
+        name: 'Routes',
+        component: () => import('../components/Routes.vue')
+      },
+      {
+        path: '/home/bus/:busId',
+        name: 'Bus',
+        component: () => import('../components/Bus.vue')
+      }
+    ]
   },
   {
     path: '/about',
