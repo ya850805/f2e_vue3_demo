@@ -4,7 +4,7 @@
     <div class="searchArea">
       <h2>搜尋</h2>
       <div>
-        <select>
+        <select v-model="city">
           <option>台北市</option>
         </select>
       </div>
@@ -14,12 +14,13 @@
     </div>
 
     <div>
-      <router-link to="/home/routes">Routes</router-link>
+      <router-link to="/home/bus/1">Bus</router-link>
     </div>
 
     <div>
-      <router-link to="/home/bus/1">Bus</router-link>
+      <router-link to="/home/routes">Routes</router-link>
     </div>
+
     <router-view></router-view>
   </div>
 </template>
@@ -31,7 +32,9 @@ import { Options, Vue } from 'vue-class-component';
   components: {
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  city: string = '台北市';
+}
 </script>
 
 <style>
