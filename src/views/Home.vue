@@ -17,7 +17,7 @@
     </div>
 
     <div>
-      <router-link to="/home/bus/1">Bus</router-link>
+      <router-link to="/home/bus">Bus</router-link>
     </div>
 
     <div>
@@ -32,7 +32,6 @@
 import {Vue} from 'vue-class-component';
 import {Watch} from 'vue-property-decorator';
 
-// @Component
 export default class Home extends Vue {
   city: string = '台北市';
   name: string = '';

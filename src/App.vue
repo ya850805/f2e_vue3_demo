@@ -27,12 +27,8 @@
 
 import {Vue} from "vue-class-component";
 
-export default class Home extends Vue {
-  data() {
-    return {
-      fontSize: 1
-    }
-  }
+export default class App extends Vue {
+  fontSize: number = 1;
 }
 </script>
 
