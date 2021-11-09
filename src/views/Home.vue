@@ -6,10 +6,13 @@
       <div>
         <select v-model="city">
           <option>台北市</option>
+          <option>台中市</option>
+          <option>嘉義市</option>
+          <option>高雄市</option>
         </select>
       </div>
       <div>
-        <input type="text" placeholder="請輸入路線、站名"/>
+        <input type="text" v-model="name" placeholder="請輸入路線、站名"/>
       </div>
     </div>
 
@@ -26,14 +29,24 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
+import {Vue} from 'vue-class-component';
+import {Watch} from 'vue-property-decorator';
 
-@Options({
-  components: {
-  },
-})
+// @Component
 export default class Home extends Vue {
   city: string = '台北市';
+  name: string = '';
+
+  @Watch("city")
+  watchCity(newVal: number, oldVal: number): void {
+    console.log(newVal)
+  }
+
+  @Watch("name")
+  watchName(newVal: number, oldVal: number): void {
+    console.log(newVal)
+  }
+
 }
 </script>
 
