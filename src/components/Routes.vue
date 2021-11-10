@@ -18,6 +18,10 @@ export default class Routes extends Vue {
     this.city = this.$route.params.city;
     this.name = this.$route.params.name;
   }
+
+  show() {
+    // this.$sendRequest();
+  }
 }
 </script>
 
